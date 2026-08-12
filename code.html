@@ -1,0 +1,605 @@
+<!DOCTYPE html><html lang="pt-br" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={theme:{extend:{colors:{"surface-variant":"#dde4e6","on-tertiary-fixed":"#03210b","on-secondary-container":"#673b00","primary-fixed-dim":"#9dd3aa","surface-container-low":"#eef5f7","on-error":"#ffffff","on-secondary-fixed-variant":"#693c00","outline-variant":"#c1c9bf","on-tertiary-container":"#97ba99","tertiary-fixed-dim":"#acd0ad","tertiary":"#16341c","on-primary":"#ffffff","tertiary-container":"#2c4b31","error":"#ba1a1a","on-primary-fixed-variant":"#1d5031","on-background":"#161d1f","surface-container-high":"#e2e9ec","primary-container":"#1a4d2e","background":"#f4fafd","outline":"#717971","surface-container-lowest":"#ffffff","secondary-fixed-dim":"#ffb86f","on-secondary":"#ffffff","on-primary-fixed":"#00210e","on-surface-variant":"#414942","surface-bright":"#f4fafd","inverse-primary":"#9dd3aa","secondary-fixed":"#ffdcbe","surface":"#f4fafd","secondary-container":"#fd9d27","inverse-on-surface":"#ebf2f4","surface-container":"#e8eff1","on-primary-container":"#88bd95","surface-tint":"#366847","secondary":"#8a5100","on-tertiary":"#ffffff","primary":"#00361a","on-error-container":"#93000a","surface-container-highest":"#dde4e6","on-surface":"#161d1f","tertiary-fixed":"#c8ecc8","inverse-surface":"#2b3234","error-container":"#ffdad6","primary-fixed":"#b8f0c5","surface-dim":"#d4dbdd","on-tertiary-fixed-variant":"#2f4e33","on-secondary-fixed":"#2c1600"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{md:"16px",xl:"48px",lg:"24px",sm:"8px","margin-desktop":"64px",base:"4px",xs:"4px","margin-mobile":"16px",gutter:"20px"},fontFamily:{"body-sm":["Inter"],"label-bold":["Inter"],"display-lg":["Montserrat"],"headline-lg-mobile":["Montserrat"],"headline-lg":["Montserrat"],"title-md":["Inter"],"body-lg":["Inter"]},fontSize:{"body-sm":["14px",{lineHeight:"20px",fontWeight:"400"}],"label-bold":["12px",{lineHeight:"16px",letterSpacing:"0.05em",fontWeight:"700"}],"display-lg":["48px",{lineHeight:"56px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-lg-mobile":["24px",{lineHeight:"32px",fontWeight:"600"}],"headline-lg":["32px",{lineHeight:"40px",fontWeight:"600"}],"title-md":["18px",{lineHeight:"24px",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}]}}}}</script><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"></head><body class="bg-background font-body-lg text-on-background"><header class="fixed top-0 w-full z-40 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop flex items-center gap-lg"><div class="flex items-center gap-sm shrink-0"><img alt="Logotipo.jpeg" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLueWmadGFZvDhCs2BXW0oJ_grtI9kyZrw4ZaQhejCy5k6YvF6k0aws6lkK0f1j_X1Ixz5goKIOjmkog12wX9WPr3iCnWbXQbERKVXYllv3mjP4O2KwCyH3bW3rlBnoinexow6tLb90jpW-t_kX7hk9-_XjuEhKDHPnRli-vmp5PVT92xeGYGyvscw6kgkAttTmFIqQ7X8BygCtal7KBYmZJfb6nff2lsELy1n8tCl4EJadT9Y6bynCQ6yB6JA0zSsNASq1TVbXo39M"><span class="font-headline-lg text-headline-lg text-primary hidden lg:block">Rancho Flexível</span></div><div class="flex-1 max-w-xl hidden md:flex items-center bg-surface-container-low rounded-full px-md py-xs"><span class="material-symbols-outlined text-outline">search</span><input class="bg-transparent border-none outline-none w-full px-sm text-body-sm text-on-surface-variant" placeholder="O que procura hoje?" type="text"></div><nav class="hidden xl:flex items-center gap-lg ml-auto" data-active-classes="text-primary font-bold"><a class="text-body-lg text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="#">Produtos</a><a class="text-body-lg text-on-surface-variant hover:text-primary transition-colors" data-path="rancho-do-mes" href="#">Rancho do mês</a><a class="text-body-lg text-on-surface-variant hover:text-primary transition-colors" data-path="administracao" href="#">Administração</a></nav><div class="flex items-center gap-md ml-auto lg:ml-0"><button class="p-sm hover:bg-surface-container-high rounded-full relative"><span class="material-symbols-outlined text-on-surface">favorite</span></button><button class="p-sm bg-secondary-container hover:bg-secondary rounded-full relative group transition-colors text-on-secondary-fixed"><span class="material-symbols-outlined">shopping_basket</span><span class="absolute -top-1 -right-1 bg-primary text-on-primary text-[10px] w-5 h-5 flex items-center justify-center rounded-full border-2 border-surface">3</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="pt-20 min-h-screen"><div class="flex flex-col w-full h-full pb-xl">
+<div class="max-w-[1280px] w-full mx-auto px-margin-mobile lg:px-margin-desktop mt-lg flex flex-col md:flex-row gap-lg">
+<!-- Sidebar / Filters -->
+<aside class="w-full md:w-[280px] flex-shrink-0 flex flex-col gap-lg">
+<!-- Filter Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] p-md flex flex-col gap-md">
+<h2 class="font-title-md text-title-md text-on-surface">Categorias</h2>
+<div class="flex flex-col gap-sm">
+<label class="flex items-center gap-sm cursor-pointer group">
+<input checked="" class="w-4 h-4 text-primary bg-surface-container rounded-sm border-none focus:ring-primary focus:ring-2 accent-primary transition-colors cursor-pointer" type="checkbox">
+<span class="font-body-lg text-body-lg text-on-surface-variant group-hover:text-primary transition-colors">Todos os Produtos</span>
+</label>
+<label class="flex items-center gap-sm cursor-pointer group">
+<input class="w-4 h-4 text-primary bg-surface-container rounded-sm border-none focus:ring-primary focus:ring-2 accent-primary transition-colors cursor-pointer" type="checkbox">
+<span class="font-body-lg text-body-lg text-on-surface-variant group-hover:text-primary transition-colors">Arroz e Cereais</span>
+</label>
+<label class="flex items-center gap-sm cursor-pointer group">
+<input class="w-4 h-4 text-primary bg-surface-container rounded-sm border-none focus:ring-primary focus:ring-2 accent-primary transition-colors cursor-pointer" type="checkbox">
+<span class="font-body-lg text-body-lg text-on-surface-variant group-hover:text-primary transition-colors">Massas</span>
+</label>
+<label class="flex items-center gap-sm cursor-pointer group">
+<input class="w-4 h-4 text-primary bg-surface-container rounded-sm border-none focus:ring-primary focus:ring-2 accent-primary transition-colors cursor-pointer" type="checkbox">
+<span class="font-body-lg text-body-lg text-on-surface-variant group-hover:text-primary transition-colors">Proteínas</span>
+</label>
+<label class="flex items-center gap-sm cursor-pointer group">
+<input class="w-4 h-4 text-primary bg-surface-container rounded-sm border-none focus:ring-primary focus:ring-2 accent-primary transition-colors cursor-pointer" type="checkbox">
+<span class="font-body-lg text-body-lg text-on-surface-variant group-hover:text-primary transition-colors">Hortifruti</span>
+</label>
+<label class="flex items-center gap-sm cursor-pointer group">
+<input class="w-4 h-4 text-primary bg-surface-container rounded-sm border-none focus:ring-primary focus:ring-2 accent-primary transition-colors cursor-pointer" type="checkbox">
+<span class="font-body-lg text-body-lg text-on-surface-variant group-hover:text-primary transition-colors">Laticínios</span>
+</label>
+<label class="flex items-center gap-sm cursor-pointer group">
+<input class="w-4 h-4 text-primary bg-surface-container rounded-sm border-none focus:ring-primary focus:ring-2 accent-primary transition-colors cursor-pointer" type="checkbox">
+<span class="font-body-lg text-body-lg text-on-surface-variant group-hover:text-primary transition-colors">Bebidas</span>
+</label>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] p-md flex flex-col gap-md">
+<h2 class="font-title-md text-title-md text-on-surface">Faixa de Preço</h2>
+<div class="flex flex-col gap-sm">
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span class="">R$ 0,00</span>
+<span class="">R$ 200,00+</span>
+</div>
+<input class="w-full h-2 bg-surface-variant rounded-lg appearance-none cursor-pointer accent-primary" max="200" min="0" type="range" value="100">
+<div class="flex items-center gap-sm mt-sm">
+<div class="flex-1 bg-surface-container rounded-lg px-sm py-xs">
+<span class="font-label-bold text-label-bold text-outline uppercase block mb-[2px]">Mín</span>
+<span class="font-body-sm text-body-sm text-on-surface">R$ 0</span>
+</div>
+<div class="flex-1 bg-surface-container rounded-lg px-sm py-xs">
+<span class="font-label-bold text-label-bold text-outline uppercase block mb-[2px]">Máx</span>
+<span class="font-body-sm text-body-sm text-on-surface">R$ 100</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-md flex flex-col items-center justify-center text-center gap-sm overflow-hidden relative group cursor-pointer h-[200px]">
+<div class="absolute inset-0 bg-cover bg-center opacity-40 transition-transform duration-700 group-hover:scale-110" data-alt="A macro shot of fresh, dewy green produce like lettuce, spinach, and herbs in a woven basket, soft natural morning sunlight filtering through, high resolution, organic and vibrant aesthetic, shallow depth of field." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBWxY5_jLMM5UiW7VJH9ogB-dJQAxj1CsJhSLfRJgcZXfHReqZ0FeBximYUbTl8bnqVJ1ZjNoPT0zarOwgiaiaWwMsSjubiHv5KX5hEt4WVrkTvSrhndj0ReOPwf-1uQb5tfJlnARsvgw0XSwt8DF9d3RpV9Vo1WGFJO1QbytGwb6uquQWzHwZt9BghzsKfeFh-e6eClGSpxU4JhRXNB9EcHLiicVBQ8uqiY0yKF4_sFa3f9Ufs9-Am_w')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-tertiary-container/90 to-tertiary-container/40 mix-blend-multiply"></div>
+<div class="relative z-10 flex flex-col items-center gap-xs">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[32px] mb-xs">local_shipping</span>
+<h3 class="font-title-md text-title-md text-on-primary">Frete Grátis</h3>
+<p class="font-body-sm text-body-sm text-primary-fixed">Nas compras acima de R$ 250</p>
+<button class="mt-sm bg-primary text-on-primary px-sm py-[4px] rounded-full font-label-bold text-label-bold hover:bg-on-primary hover:text-primary transition-colors">Saiba Mais</button>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col gap-lg min-w-0">
+<!-- Toolbar: Search & Sort -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-md bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] p-md">
+<!-- Mobile/Secondary Search -->
+<div class="w-full sm:w-auto flex-1 max-w-[400px] flex items-center bg-surface-container-low rounded-full px-md py-xs focus-within:ring-2 focus-within:ring-primary/50 transition-shadow">
+<span class="material-symbols-outlined text-outline">search</span>
+<input class="bg-transparent border-none outline-none w-full px-sm text-body-lg text-on-surface-variant placeholder:text-outline/70" placeholder="Buscar produtos na loja..." type="text">
+</div>
+<!-- Sort Dropdown -->
+<div class="flex items-center gap-sm shrink-0">
+<span class="font-body-sm text-body-sm text-on-surface-variant hidden md:inline-block">Ordenar por:</span>
+<div class="relative group">
+<button class="flex items-center gap-xs bg-surface-container rounded-lg px-md py-sm font-body-sm text-body-sm text-on-surface hover:bg-surface-container-high transition-colors">
+                  Popularidade
+                  <span class="material-symbols-outlined text-[20px]">expand_more</span>
+</button>
+<!-- Dropdown Menu (Hidden by default, styled for hover/focus simulation) -->
+<div class="absolute right-0 top-full mt-xs w-48 bg-surface-container-lowest rounded-xl shadow-xl z-20 hidden group-hover:flex flex-col py-xs">
+<button class="text-left px-md py-sm font-body-sm text-body-sm text-primary bg-primary/10 transition-colors">Popularidade</button>
+<button class="text-left px-md py-sm font-body-sm text-body-sm text-on-surface hover:bg-surface-container transition-colors">Menor Preço</button>
+<button class="text-left px-md py-sm font-body-sm text-body-sm text-on-surface hover:bg-surface-container transition-colors">Maior Preço</button>
+<button class="text-left px-md py-sm font-body-sm text-body-sm text-on-surface hover:bg-surface-container transition-colors">Lançamentos</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Active Filters / Results Info -->
+<div class="flex items-center gap-sm flex-wrap">
+<span class="font-body-sm text-body-sm text-on-surface-variant mr-auto">Mostrando <strong>1-12</strong> de <strong>36</strong> produtos</span>
+<div class="flex items-center bg-[#E8F5E9] rounded-full px-sm py-[4px] gap-xs shadow-sm">
+<span class="font-body-sm text-body-sm text-[#1B5E20]">Arroz e Cereais</span>
+<button class="w-4 h-4 rounded-full bg-[#1B5E20]/20 flex items-center justify-center text-[#1B5E20] hover:bg-[#1B5E20] hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</div>
+<button class="font-body-sm text-body-sm text-outline hover:text-primary transition-colors underline decoration-dotted">Limpar filtros</button>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-md md:gap-lg"><!-- Product Card 1 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate">
+<button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5jBLhkRT5MtofdIG4seJS4fsnEFLL14WzH-d3p8At628tJJ08PL35AzMEsjhrUN0oRmvJ_fNGob5n1gkbzOP24zRpR-UJfk9mh7YIXh9yK_DqmfS9ejeihU3ZSCauJmQg9OL8sDFTvGeFSiq28LsbuGjph9CcpQ6seH0EhryK5IsMCz-yERs-t6XPnGEsZdr0XB_CRdSgHbSHo-5hhBP9iSZ64t0GZKqazAgXrsQrsyUVhALSWD4Qjg">
+</div>
+<div class="p-md flex flex-col flex-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Arroz e Cereais</span>
+<h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">Arroz Jasmine Dona Ana</h3>
+<span class="font-body-sm text-body-sm text-outline mb-auto">5 kg</span>
+<div class="flex items-end justify-between mt-md relative">
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">621<span class="text-title-md">,50 MT</span></span>
+</div>
+<button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20">
+<span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate">
+<button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5jBLhkRT5MtofdIG4seJS4fsnEFLL14WzH-d3p8At628tJJ08PL35AzMEsjhrUN0oRmvJ_fNGob5n1gkbzOP24zRpR-UJfk9mh7YIXh9yK_DqmfS9ejeihU3ZSCauJmQg9OL8sDFTvGeFSiq28LsbuGjph9CcpQ6seH0EhryK5IsMCz-yERs-t6XPnGEsZdr0XB_CRdSgHbSHo-5hhBP9iSZ64t0GZKqazAgXrsQrsyUVhALSWD4Qjg">
+</div>
+<div class="p-md flex flex-col flex-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Arroz e Cereais</span>
+<h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">Arroz Jasmine Excella</h3>
+<span class="font-body-sm text-body-sm text-outline mb-auto">5 kg</span>
+<div class="flex items-end justify-between mt-md relative">
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">451<span class="text-title-md">,00 MT</span></span>
+</div>
+<button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20">
+<span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate">
+<button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5jBLhkRT5MtofdIG4seJS4fsnEFLL14WzH-d3p8At628tJJ08PL35AzMEsjhrUN0oRmvJ_fNGob5n1gkbzOP24zRpR-UJfk9mh7YIXh9yK_DqmfS9ejeihU3ZSCauJmQg9OL8sDFTvGeFSiq28LsbuGjph9CcpQ6seH0EhryK5IsMCz-yERs-t6XPnGEsZdr0XB_CRdSgHbSHo-5hhBP9iSZ64t0GZKqazAgXrsQrsyUVhALSWD4Qjg">
+</div>
+<div class="p-md flex flex-col flex-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Arroz e Cereais</span>
+<h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">Arroz Jasmine Royal Aroma</h3>
+<span class="font-body-sm text-body-sm text-outline mb-auto">5 kg</span>
+<div class="flex items-end justify-between mt-md relative">
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">412<span class="text-title-md">,50 MT</span></span>
+</div>
+<button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20">
+<span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate">
+<button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5jBLhkRT5MtofdIG4seJS4fsnEFLL14WzH-d3p8At628tJJ08PL35AzMEsjhrUN0oRmvJ_fNGob5n1gkbzOP24zRpR-UJfk9mh7YIXh9yK_DqmfS9ejeihU3ZSCauJmQg9OL8sDFTvGeFSiq28LsbuGjph9CcpQ6seH0EhryK5IsMCz-yERs-t6XPnGEsZdr0XB_CRdSgHbSHo-5hhBP9iSZ64t0GZKqazAgXrsQrsyUVhALSWD4Qjg">
+</div>
+<div class="p-md flex flex-col flex-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Arroz e Cereais</span>
+<h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">Arroz Basmati Arya Azul</h3>
+<span class="font-body-sm text-body-sm text-outline mb-auto">5 kg</span>
+<div class="flex items-end justify-between mt-md relative">
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">687<span class="text-title-md">,50 MT</span></span>
+</div>
+<button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20">
+<span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate">
+<button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5jBLhkRT5MtofdIG4seJS4fsnEFLL14WzH-d3p8At628tJJ08PL35AzMEsjhrUN0oRmvJ_fNGob5n1gkbzOP24zRpR-UJfk9mh7YIXh9yK_DqmfS9ejeihU3ZSCauJmQg9OL8sDFTvGeFSiq28LsbuGjph9CcpQ6seH0EhryK5IsMCz-yERs-t6XPnGEsZdr0XB_CRdSgHbSHo-5hhBP9iSZ64t0GZKqazAgXrsQrsyUVhALSWD4Qjg">
+</div>
+<div class="p-md flex flex-col flex-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Arroz e Cereais</span>
+<h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">Arroz Mariana Supremo Rosa</h3>
+<span class="font-body-sm text-body-sm text-outline mb-auto">5 kg</span>
+<div class="flex items-end justify-between mt-md relative">
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">324<span class="text-title-md">,50 MT</span></span>
+</div>
+<button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20">
+<span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate">
+<button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5jBLhkRT5MtofdIG4seJS4fsnEFLL14WzH-d3p8At628tJJ08PL35AzMEsjhrUN0oRmvJ_fNGob5n1gkbzOP24zRpR-UJfk9mh7YIXh9yK_DqmfS9ejeihU3ZSCauJmQg9OL8sDFTvGeFSiq28LsbuGjph9CcpQ6seH0EhryK5IsMCz-yERs-t6XPnGEsZdr0XB_CRdSgHbSHo-5hhBP9iSZ64t0GZKqazAgXrsQrsyUVhALSWD4Qjg">
+</div>
+<div class="p-md flex flex-col flex-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Arroz e Cereais</span>
+<h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">Arroz Tio António Azul</h3>
+<span class="font-body-sm text-body-sm text-outline mb-auto">10 kg</span>
+<div class="flex items-end justify-between mt-md relative">
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">616<span class="text-title-md">,00 MT</span></span>
+</div>
+<button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20">
+<span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 7 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate">
+<button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLeufiPs4cQIMrju95tmEnhndGXbwS4u5LDfMwZa_SBD-lH--CHwMX8EhBIHggwOU5fQ8DBS_z9ev7G3OEsQH-Zsmtl7pHKDhLXmY6ZsVNXa2h4AZz75FfE12C_kLkNBgJb2HcerNXHzCheiORp4NCA36z5ESGyGQR_C-rH27NIeIjECdI3JR86-B2K101VqvWbQ2lUHQ0Y5Xh_ck05FUunGpwYnU90AQM2ShZAdOzufDOmnSoCnz3jw">
+</div>
+<div class="p-md flex flex-col flex-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Massas</span>
+<h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">Massa Esparguete Bella</h3>
+<span class="font-body-sm text-body-sm text-outline mb-auto">1 pacote</span>
+<div class="flex items-end justify-between mt-md relative">
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">34<span class="text-title-md">,10 MT</span></span>
+</div>
+<button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20">
+<span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 8 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate">
+<button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLeufiPs4cQIMrju95tmEnhndGXbwS4u5LDfMwZa_SBD-lH--CHwMX8EhBIHggwOU5fQ8DBS_z9ev7G3OEsQH-Zsmtl7pHKDhLXmY6ZsVNXa2h4AZz75FfE12C_kLkNBgJb2HcerNXHzCheiORp4NCA36z5ESGyGQR_C-rH27NIeIjECdI3JR86-B2K101VqvWbQ2lUHQ0Y5Xh_ck05FUunGpwYnU90AQM2ShZAdOzufDOmnSoCnz3jw">
+</div>
+<div class="p-md flex flex-col flex-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Massas</span>
+<h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">Massa Esparguete Polana</h3>
+<span class="font-body-sm text-body-sm text-outline mb-auto">1 pacote</span>
+<div class="flex items-end justify-between mt-md relative">
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">31<span class="text-title-md">,90 MT</span></span>
+</div>
+<button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20">
+<span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 9 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate">
+<button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv5-pHvgKwUi-nO-Fkgf5jbFv91hLBlbIBND4O64K5GF6evz3gkwfPdpgjqUQN2QlvzYN4bTpfIRy2P5K7D6OPk3dwuB_3ROnnI3-cl7p7G_mXkalOPA77fRTVcPARLBLtYjPnvVoya8wBgWEigNNKPJfxILiCdM9VZSHrxDt9AWOk7AV0eMUj87Mw0KdShrlL33k4nLs5R__Kr4KbTM13A9EX3KAmt0Vmu_1gu-K47ELTLsi-Zn8EQg">
+</div>
+<div class="p-md flex flex-col flex-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Farinhas</span>
+<h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">Farinha de Trigo Bela</h3>
+<span class="font-body-sm text-body-sm text-outline mb-auto">10 kg</span>
+<div class="flex items-end justify-between mt-md relative">
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">687<span class="text-title-md">,50 MT</span></span>
+</div>
+<button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20">
+<span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 10 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate">
+<button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv5-pHvgKwUi-nO-Fkgf5jbFv91hLBlbIBND4O64K5GF6evz3gkwfPdpgjqUQN2QlvzYN4bTpfIRy2P5K7D6OPk3dwuB_3ROnnI3-cl7p7G_mXkalOPA77fRTVcPARLBLtYjPnvVoya8wBgWEigNNKPJfxILiCdM9VZSHrxDt9AWOk7AV0eMUj87Mw0KdShrlL33k4nLs5R__Kr4KbTM13A9EX3KAmt0Vmu_1gu-K47ELTLsi-Zn8EQg">
+</div>
+<div class="p-md flex flex-col flex-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Farinhas</span>
+<h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">Farinha de Milho White Star</h3>
+<span class="font-body-sm text-body-sm text-outline mb-auto">1 kg</span>
+<div class="flex items-end justify-between mt-md relative">
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">52<span class="text-title-md">,25 MT</span></span>
+</div>
+<button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20">
+<span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span>
+</button>
+</div>
+</div>
+</div><!-- Product Card 11 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate">
+<button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5jBLhkRT5MtofdIG4seJS4fsnEFLL14WzH-d3p8At628tJJ08PL35AzMEsjhrUN0oRmvJ_fNGob5n1gkbzOP24zRpR-UJfk9mh7YIXh9yK_DqmfS9ejeihU3ZSCauJmQg9OL8sDFTvGeFSiq28LsbuGjph9CcpQ6seH0EhryK5IsMCz-yERs-t6XPnGEsZdr0XB_CRdSgHbSHo-5hhBP9iSZ64t0GZKqazAgXrsQrsyUVhALSWD4Qjg">
+</div>
+<div class="p-md flex flex-col flex-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Óleo e temperos</span>
+<h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">Óleo Dona</h3>
+<span class="font-body-sm text-body-sm text-outline mb-auto">5 L</span>
+<div class="flex items-end justify-between mt-md relative">
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">838<span class="text-title-md">,75 MT</span></span>
+</div>
+<button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20">
+<span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 12 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate">
+<button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5jBLhkRT5MtofdIG4seJS4fsnEFLL14WzH-d3p8At628tJJ08PL35AzMEsjhrUN0oRmvJ_fNGob5n1gkbzOP24zRpR-UJfk9mh7YIXh9yK_DqmfS9ejeihU3ZSCauJmQg9OL8sDFTvGeFSiq28LsbuGjph9CcpQ6seH0EhryK5IsMCz-yERs-t6XPnGEsZdr0XB_CRdSgHbSHo-5hhBP9iSZ64t0GZKqazAgXrsQrsyUVhALSWD4Qjg">
+</div>
+<div class="p-md flex flex-col flex-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Óleo e temperos</span>
+<h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">Vinagre Neymat</h3>
+<span class="font-body-sm text-body-sm text-outline mb-auto">750 ml</span>
+<div class="flex items-end justify-between mt-md relative">
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">27<span class="text-title-md">,50 MT</span></span>
+</div>
+<button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20">
+<span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 13 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate">
+<button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5jBLhkRT5MtofdIG4seJS4fsnEFLL14WzH-d3p8At628tJJ08PL35AzMEsjhrUN0oRmvJ_fNGob5n1gkbzOP24zRpR-UJfk9mh7YIXh9yK_DqmfS9ejeihU3ZSCauJmQg9OL8sDFTvGeFSiq28LsbuGjph9CcpQ6seH0EhryK5IsMCz-yERs-t6XPnGEsZdr0XB_CRdSgHbSHo-5hhBP9iSZ64t0GZKqazAgXrsQrsyUVhALSWD4Qjg">
+</div>
+<div class="p-md flex flex-col flex-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Óleo e temperos</span>
+<h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">Azeite Gourmet</h3>
+<span class="font-body-sm text-body-sm text-outline mb-auto">500 ml</span>
+<div class="flex items-end justify-between mt-md relative">
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">632<span class="text-title-md">,50 MT</span></span>
+</div>
+<button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20">
+<span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 14 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate">
+<button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5jBLhkRT5MtofdIG4seJS4fsnEFLL14WzH-d3p8At628tJJ08PL35AzMEsjhrUN0oRmvJ_fNGob5n1gkbzOP24zRpR-UJfk9mh7YIXh9yK_DqmfS9ejeihU3ZSCauJmQg9OL8sDFTvGeFSiq28LsbuGjph9CcpQ6seH0EhryK5IsMCz-yERs-t6XPnGEsZdr0XB_CRdSgHbSHo-5hhBP9iSZ64t0GZKqazAgXrsQrsyUVhALSWD4Qjg">
+</div>
+<div class="p-md flex flex-col flex-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Bebidas</span>
+<h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">Água Vumba</h3>
+<span class="font-body-sm text-body-sm text-outline mb-auto">1,5 L</span>
+<div class="flex items-end justify-between mt-md relative">
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">42<span class="text-title-md">,16 MT</span></span>
+</div>
+<button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20">
+<span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 15 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate">
+<button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5jBLhkRT5MtofdIG4seJS4fsnEFLL14WzH-d3p8At628tJJ08PL35AzMEsjhrUN0oRmvJ_fNGob5n1gkbzOP24zRpR-UJfk9mh7YIXh9yK_DqmfS9ejeihU3ZSCauJmQg9OL8sDFTvGeFSiq28LsbuGjph9CcpQ6seH0EhryK5IsMCz-yERs-t6XPnGEsZdr0XB_CRdSgHbSHo-5hhBP9iSZ64t0GZKqazAgXrsQrsyUVhALSWD4Qjg">
+</div>
+<div class="p-md flex flex-col flex-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Bebidas</span>
+<h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">Água Namaacha</h3>
+<span class="font-body-sm text-body-sm text-outline mb-auto">1,5 L</span>
+<div class="flex items-end justify-between mt-md relative">
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">34<span class="text-title-md">,38 MT</span></span>
+</div>
+<button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20">
+<span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 16 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate">
+<button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5jBLhkRT5MtofdIG4seJS4fsnEFLL14WzH-d3p8At628tJJ08PL35AzMEsjhrUN0oRmvJ_fNGob5n1gkbzOP24zRpR-UJfk9mh7YIXh9yK_DqmfS9ejeihU3ZSCauJmQg9OL8sDFTvGeFSiq28LsbuGjph9CcpQ6seH0EhryK5IsMCz-yERs-t6XPnGEsZdr0XB_CRdSgHbSHo-5hhBP9iSZ64t0GZKqazAgXrsQrsyUVhALSWD4Qjg">
+</div>
+<div class="p-md flex flex-col flex-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Bebidas</span>
+<h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">Refrigerante Coca-Cola</h3>
+<span class="font-body-sm text-body-sm text-outline mb-auto">2 L</span>
+<div class="flex items-end justify-between mt-md relative">
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">104<span class="text-title-md">,50 MT</span></span>
+</div>
+<button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20">
+<span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 17 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate">
+<button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5jBLhkRT5MtofdIG4seJS4fsnEFLL14WzH-d3p8At628tJJ08PL35AzMEsjhrUN0oRmvJ_fNGob5n1gkbzOP24zRpR-UJfk9mh7YIXh9yK_DqmfS9ejeihU3ZSCauJmQg9OL8sDFTvGeFSiq28LsbuGjph9CcpQ6seH0EhryK5IsMCz-yERs-t6XPnGEsZdr0XB_CRdSgHbSHo-5hhBP9iSZ64t0GZKqazAgXrsQrsyUVhALSWD4Qjg">
+</div>
+<div class="p-md flex flex-col flex-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Bebidas</span>
+<h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">Sumo Compal</h3>
+<span class="font-body-sm text-body-sm text-outline mb-auto">1 L</span>
+<div class="flex items-end justify-between mt-md relative">
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">129<span class="text-title-md">,71 MT</span></span>
+</div>
+<button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20">
+<span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 18 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate">
+<button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5jBLhkRT5MtofdIG4seJS4fsnEFLL14WzH-d3p8At628tJJ08PL35AzMEsjhrUN0oRmvJ_fNGob5n1gkbzOP24zRpR-UJfk9mh7YIXh9yK_DqmfS9ejeihU3ZSCauJmQg9OL8sDFTvGeFSiq28LsbuGjph9CcpQ6seH0EhryK5IsMCz-yERs-t6XPnGEsZdr0XB_CRdSgHbSHo-5hhBP9iSZ64t0GZKqazAgXrsQrsyUVhALSWD4Qjg">
+</div>
+<div class="p-md flex flex-col flex-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Higiene e limpeza</span>
+<h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">Pasta Colgate Maximum</h3>
+<span class="font-body-sm text-body-sm text-outline mb-auto">140 g</span>
+<div class="flex items-end justify-between mt-md relative">
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">72<span class="text-title-md">,57 MT</span></span>
+</div>
+<button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20">
+<span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 19 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate">
+<button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5jBLhkRT5MtofdIG4seJS4fsnEFLL14WzH-d3p8At628tJJ08PL35AzMEsjhrUN0oRmvJ_fNGob5n1gkbzOP24zRpR-UJfk9mh7YIXh9yK_DqmfS9ejeihU3ZSCauJmQg9OL8sDFTvGeFSiq28LsbuGjph9CcpQ6seH0EhryK5IsMCz-yERs-t6XPnGEsZdr0XB_CRdSgHbSHo-5hhBP9iSZ64t0GZKqazAgXrsQrsyUVhALSWD4Qjg">
+</div>
+<div class="p-md flex flex-col flex-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Higiene e limpeza</span>
+<h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">Papel Higiénico Baby Soft</h3>
+<span class="font-body-sm text-body-sm text-outline mb-auto">1 rolo</span>
+<div class="flex items-end justify-between mt-md relative">
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">43<span class="text-title-md">,54 MT</span></span>
+</div>
+<button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20">
+<span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 20 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate">
+<button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5jBLhkRT5MtofdIG4seJS4fsnEFLL14WzH-d3p8At628tJJ08PL35AzMEsjhrUN0oRmvJ_fNGob5n1gkbzOP24zRpR-UJfk9mh7YIXh9yK_DqmfS9ejeihU3ZSCauJmQg9OL8sDFTvGeFSiq28LsbuGjph9CcpQ6seH0EhryK5IsMCz-yERs-t6XPnGEsZdr0XB_CRdSgHbSHo-5hhBP9iSZ64t0GZKqazAgXrsQrsyUVhALSWD4Qjg">
+</div>
+<div class="p-md flex flex-col flex-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Higiene e limpeza</span>
+<h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">OMO Flexi Powder</h3>
+<span class="font-body-sm text-body-sm text-outline mb-auto">2 kg</span>
+<div class="flex items-end justify-between mt-md relative">
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">320<span class="text-title-md">,84 MT</span></span>
+</div>
+<button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20">
+<span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 21 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate">
+<button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5jBLhkRT5MtofdIG4seJS4fsnEFLL14WzH-d3p8At628tJJ08PL35AzMEsjhrUN0oRmvJ_fNGob5n1gkbzOP24zRpR-UJfk9mh7YIXh9yK_DqmfS9ejeihU3ZSCauJmQg9OL8sDFTvGeFSiq28LsbuGjph9CcpQ6seH0EhryK5IsMCz-yERs-t6XPnGEsZdr0XB_CRdSgHbSHo-5hhBP9iSZ64t0GZKqazAgXrsQrsyUVhALSWD4Qjg">
+</div>
+<div class="p-md flex flex-col flex-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Higiene e limpeza</span>
+<h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">Sunlight Líquido</h3>
+<span class="font-body-sm text-body-sm text-outline mb-auto">750 ml</span>
+<div class="flex items-end justify-between mt-md relative">
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">140<span class="text-title-md">,80 MT</span></span>
+</div>
+<button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20">
+<span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 22 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate">
+<button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5jBLhkRT5MtofdIG4seJS4fsnEFLL14WzH-d3p8At628tJJ08PL35AzMEsjhrUN0oRmvJ_fNGob5n1gkbzOP24zRpR-UJfk9mh7YIXh9yK_DqmfS9ejeihU3ZSCauJmQg9OL8sDFTvGeFSiq28LsbuGjph9CcpQ6seH0EhryK5IsMCz-yERs-t6XPnGEsZdr0XB_CRdSgHbSHo-5hhBP9iSZ64t0GZKqazAgXrsQrsyUVhALSWD4Qjg">
+</div>
+<div class="p-md flex flex-col flex-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Higiene e limpeza</span>
+<h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">Amaciador Maq</h3>
+<span class="font-body-sm text-body-sm text-outline mb-auto">2 L</span>
+<div class="flex items-end justify-between mt-md relative">
+<div class="flex flex-col">
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">189<span class="text-title-md">,44 MT</span></span>
+</div>
+<button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20">
+<span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span>
+</button>
+</div>
+</div>
+</div><!-- Product Card 23 --><div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate"><button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm"><span class="material-symbols-outlined text-[20px]">favorite</span></button><div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm"><img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5jBLhkRT5MtofdIG4seJS4fsnEFLL14WzH-d3p8At628tJJ08PL35AzMEsjhrUN0oRmvJ_fNGob5n1gkbzOP24zRpR-UJfk9mh7YIXh9yK_DqmfS9ejeihU3ZSCauJmQg9OL8sDFTvGeFSiq28LsbuGjph9CcpQ6seH0EhryK5IsMCz-yERs-t6XPnGEsZdr0XB_CRdSgHbSHo-5hhBP9iSZ64t0GZKqazAgXrsQrsyUVhALSWD4Qjg"></div><div class="p-md flex flex-col flex-1"><span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Conservas</span><h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">Sardinha Lucky Star</h3><span class="font-body-sm text-body-sm text-outline mb-auto">155 g</span><div class="flex items-end justify-between mt-md relative"><div class="flex flex-col"><span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">61<span class="text-title-md">,88 MT</span></span></div><button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20"><span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span></button></div></div></div><!-- Product Card 24 --><div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate"><button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm"><span class="material-symbols-outlined text-[20px]">favorite</span></button><div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm"><img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5jBLhkRT5MtofdIG4seJS4fsnEFLL14WzH-d3p8At628tJJ08PL35AzMEsjhrUN0oRmvJ_fNGob5n1gkbzOP24zRpR-UJfk9mh7YIXh9yK_DqmfS9ejeihU3ZSCauJmQg9OL8sDFTvGeFSiq28LsbuGjph9CcpQ6seH0EhryK5IsMCz-yERs-t6XPnGEsZdr0XB_CRdSgHbSHo-5hhBP9iSZ64t0GZKqazAgXrsQrsyUVhALSWD4Qjg"></div><div class="p-md flex flex-col flex-1"><span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Conservas</span><h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">Atum Gourmet Óleo Vegetal</h3><span class="font-body-sm text-body-sm text-outline mb-auto">110 g</span><div class="flex items-end justify-between mt-md relative"><div class="flex flex-col"><span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">95<span class="text-title-md">,70 MT</span></span></div><button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20"><span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span></button></div></div></div><!-- Product Card 25 --><div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate"><button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm"><span class="material-symbols-outlined text-[20px]">favorite</span></button><div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm"><img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5jBLhkRT5MtofdIG4seJS4fsnEFLL14WzH-d3p8At628tJJ08PL35AzMEsjhrUN0oRmvJ_fNGob5n1gkbzOP24zRpR-UJfk9mh7YIXh9yK_DqmfS9ejeihU3ZSCauJmQg9OL8sDFTvGeFSiq28LsbuGjph9CcpQ6seH0EhryK5IsMCz-yERs-t6XPnGEsZdr0XB_CRdSgHbSHo-5hhBP9iSZ64t0GZKqazAgXrsQrsyUVhALSWD4Qjg"></div><div class="p-md flex flex-col flex-1"><span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Molhos</span><h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">Molho de Tomate All Gold</h3><span class="font-body-sm text-body-sm text-outline mb-auto">350 ml</span><div class="flex items-end justify-between mt-md relative"><div class="flex flex-col"><span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">119<span class="text-title-md">,16 MT</span></span></div><button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20"><span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span></button></div></div></div><!-- Product Card 26 --><div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate"><button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm"><span class="material-symbols-outlined text-[20px]">favorite</span></button><div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm"><img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5jBLhkRT5MtofdIG4seJS4fsnEFLL14WzH-d3p8At628tJJ08PL35AzMEsjhrUN0oRmvJ_fNGob5n1gkbzOP24zRpR-UJfk9mh7YIXh9yK_DqmfS9ejeihU3ZSCauJmQg9OL8sDFTvGeFSiq28LsbuGjph9CcpQ6seH0EhryK5IsMCz-yERs-t6XPnGEsZdr0XB_CRdSgHbSHo-5hhBP9iSZ64t0GZKqazAgXrsQrsyUVhALSWD4Qjg"></div><div class="p-md flex flex-col flex-1"><span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Temperos</span><h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">Aromat Knorr</h3><span class="font-body-sm text-body-sm text-outline mb-auto">75 g</span><div class="flex items-end justify-between mt-md relative"><div class="flex flex-col"><span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">55<span class="text-title-md">,00 MT</span></span></div><button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20"><span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span></button></div></div></div><!-- Product Card 27 --><div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate"><button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm"><span class="material-symbols-outlined text-[20px]">favorite</span></button><div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm"><img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5jBLhkRT5MtofdIG4seJS4fsnEFLL14WzH-d3p8At628tJJ08PL35AzMEsjhrUN0oRmvJ_fNGob5n1gkbzOP24zRpR-UJfk9mh7YIXh9yK_DqmfS9ejeihU3ZSCauJmQg9OL8sDFTvGeFSiq28LsbuGjph9CcpQ6seH0EhryK5IsMCz-yERs-t6XPnGEsZdr0XB_CRdSgHbSHo-5hhBP9iSZ64t0GZKqazAgXrsQrsyUVhALSWD4Qjg"></div><div class="p-md flex flex-col flex-1"><span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Laticínios</span><h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">Leite Parmalat</h3><span class="font-body-sm text-body-sm text-outline mb-auto">1 L</span><div class="flex items-end justify-between mt-md relative"><div class="flex flex-col"><span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">86<span class="text-title-md">,90 MT</span></span></div><button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20"><span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span></button></div></div></div><!-- Product Card 28 --><div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate"><button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm"><span class="material-symbols-outlined text-[20px]">favorite</span></button><div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm"><img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5jBLhkRT5MtofdIG4seJS4fsnEFLL14WzH-d3p8At628tJJ08PL35AzMEsjhrUN0oRmvJ_fNGob5n1gkbzOP24zRpR-UJfk9mh7YIXh9yK_DqmfS9ejeihU3ZSCauJmQg9OL8sDFTvGeFSiq28LsbuGjph9CcpQ6seH0EhryK5IsMCz-yERs-t6XPnGEsZdr0XB_CRdSgHbSHo-5hhBP9iSZ64t0GZKqazAgXrsQrsyUVhALSWD4Qjg"></div><div class="p-md flex flex-col flex-1"><span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Laticínios</span><h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">Nido Normal</h3><span class="font-body-sm text-body-sm text-outline mb-auto">600 g</span><div class="flex items-end justify-between mt-md relative"><div class="flex flex-col"><span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">393<span class="text-title-md">,80 MT</span></span></div><button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20"><span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span></button></div></div></div><!-- Product Card 29 --><div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate"><button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm"><span class="material-symbols-outlined text-[20px]">favorite</span></button><div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm"><img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5jBLhkRT5MtofdIG4seJS4fsnEFLL14WzH-d3p8At628tJJ08PL35AzMEsjhrUN0oRmvJ_fNGob5n1gkbzOP24zRpR-UJfk9mh7YIXh9yK_DqmfS9ejeihU3ZSCauJmQg9OL8sDFTvGeFSiq28LsbuGjph9CcpQ6seH0EhryK5IsMCz-yERs-t6XPnGEsZdr0XB_CRdSgHbSHo-5hhBP9iSZ64t0GZKqazAgXrsQrsyUVhALSWD4Qjg"></div><div class="p-md flex flex-col flex-1"><span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Bebidas</span><h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">Ricoffy</h3><span class="font-body-sm text-body-sm text-outline mb-auto">100 g</span><div class="flex items-end justify-between mt-md relative"><div class="flex flex-col"><span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">130<span class="text-title-md">,63 MT</span></span></div><button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20"><span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span></button></div></div></div><!-- Product Card 30 --><div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate"><button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm"><span class="material-symbols-outlined text-[20px]">favorite</span></button><div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm"><img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5jBLhkRT5MtofdIG4seJS4fsnEFLL14WzH-d3p8At628tJJ08PL35AzMEsjhrUN0oRmvJ_fNGob5n1gkbzOP24zRpR-UJfk9mh7YIXh9yK_DqmfS9ejeihU3ZSCauJmQg9OL8sDFTvGeFSiq28LsbuGjph9CcpQ6seH0EhryK5IsMCz-yERs-t6XPnGEsZdr0XB_CRdSgHbSHo-5hhBP9iSZ64t0GZKqazAgXrsQrsyUVhALSWD4Qjg"></div><div class="p-md flex flex-col flex-1"><span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Bebidas</span><h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">Chá Five Roses</h3><span class="font-body-sm text-body-sm text-outline mb-auto">65 g</span><div class="flex items-end justify-between mt-md relative"><div class="flex flex-col"><span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">101<span class="text-title-md">,98 MT</span></span></div><button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20"><span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span></button></div></div></div><!-- Product Card 31 --><div class="group flex flex-col bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300 relative cursor-pointer overflow-hidden isolate"><button class="absolute top-sm right-sm w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm flex items-center justify-center text-outline hover:text-error hover:bg-surface-container-lowest transition-colors z-10 shadow-sm"><span class="material-symbols-outlined text-[20px]">favorite</span></button><div class="w-full aspect-[4/3] bg-surface-container-low overflow-hidden relative p-sm"><img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5jBLhkRT5MtofdIG4seJS4fsnEFLL14WzH-d3p8At628tJJ08PL35AzMEsjhrUN0oRmvJ_fNGob5n1gkbzOP24zRpR-UJfk9mh7YIXh9yK_DqmfS9ejeihU3ZSCauJmQg9OL8sDFTvGeFSiq28LsbuGjph9CcpQ6seH0EhryK5IsMCz-yERs-t6XPnGEsZdr0XB_CRdSgHbSHo-5hhBP9iSZ64t0GZKqazAgXrsQrsyUVhALSWD4Qjg"></div><div class="p-md flex flex-col flex-1"><span class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Conservas</span><h3 class="font-title-md text-title-md text-on-surface mb-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">Conservas de Atum Royal Umbrella</h3><span class="font-body-sm text-body-sm text-outline mb-auto">185 g</span><div class="flex items-end justify-between mt-md relative"><div class="flex flex-col"><span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary leading-none">189<span class="text-title-md">,07 MT</span></span></div><button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center shadow-md hover:bg-secondary hover:text-on-secondary transition-colors hover:scale-110 active:scale-95 group/btn absolute right-0 bottom-0 z-20"><span class="material-symbols-outlined text-[24px] group-hover/btn:rotate-90 transition-transform duration-300">add</span></button></div></div></div></div>
+<!-- Pagination / Load More -->
+<div class="mt-xl flex flex-col items-center justify-center gap-md">
+<div class="w-full max-w-sm h-1 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[58%] rounded-full"></div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Você viu 21 de 36 produtos</span>
+<button class="px-xl py-md border-2 border-primary text-primary font-title-md text-title-md rounded-full hover:bg-primary hover:text-on-primary transition-colors">Carregar Mais Produtos</button>
+</div>
+</div>
+</div>
+</div></main><footer class="bg-surface-container-lowest border-t border-outline-variant pt-xl pb-lg"><div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-xl"><div><img alt="Logotipo.jpeg" class="h-8 mb-md" src="https://lh3.googleusercontent.com/aida/AP1WRLueWmadGFZvDhCs2BXW0oJ_grtI9kyZrw4ZaQhejCy5k6YvF6k0aws6lkK0f1j_X1Ixz5goKIOjmkog12wX9WPr3iCnWbXQbERKVXYllv3mjP4O2KwCyH3bW3rlBnoinexow6tLb90jpW-t_kX7hk9-_XjuEhKDHPnRli-vmp5PVT92xeGYGyvscw6kgkAttTmFIqQ7X8BygCtal7KBYmZJfb6nff2lsELy1n8tCl4EJadT9Y6bynCQ6yB6JA0zSsNASq1TVbXo39M"><p class="text-body-sm text-on-surface-variant">Qualidade do campo direto para a sua mesa, com a flexibilidade que seu dia a dia pede.</p></div><div><h4 class="font-title-md text-title-md text-on-surface mb-md">Links Úteis</h4><ul class="space-y-sm text-body-sm text-on-surface-variant"><li class=""><a class="hover:text-primary" href="#">Privacidade</a></li><li class=""><a class="hover:text-primary" href="#">Termos de Uso</a></li><li class=""><a class="hover:text-primary" href="#">FAQ</a></li></ul></div><div><h4 class="font-title-md text-title-md text-on-surface mb-md">Contato</h4><p class="text-body-sm text-on-surface-variant">contato@ranchoflexivel.com.br<br>(11) 9999-9999</p></div><div><h4 class="font-title-md text-title-md text-on-surface mb-md">Siga-nos</h4><div class="flex gap-md"><span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-secondary">share</span><span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-secondary">public</span></div></div></div><div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop mt-xl pt-md border-t border-outline-variant text-center text-body-sm text-outline">© 2024 Rancho Flexível. Todos os direitos reservados.</div></footer>
+
+</body></html>
